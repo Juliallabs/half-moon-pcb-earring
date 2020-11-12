@@ -1,2 +1,4 @@
 # half-moon-pcb-earring
-PCB Badge design of a half moon earring
+It's an earring that works linke a bussiness card with my social medias.
+https://easyeda.com/juliaperonm/business-card-half-moon-earring
+https://easyeda.com/
