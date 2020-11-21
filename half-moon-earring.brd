@@ -3,10 +3,10 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mic" altunit="mic"/>
+<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mic" altunit="mic"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -5764,6 +5764,8 @@
 </polygon>
 <wire x1="20.1" y1="64.7" x2="19.9" y2="64.7" width="0.4064" layer="30"/>
 <wire x1="19.9" y1="64.7" x2="19.8" y2="64.8" width="0.4064" layer="30"/>
+<wire x1="9.53" y1="31.23" x2="10.69" y2="32.39" width="0.03" layer="29" style="dashdot"/>
+<wire x1="10.69" y1="32.39" x2="10.82" y2="32.39" width="0.03" layer="29" style="dashdot"/>
 </plain>
 <libraries>
 <library name="PatternAgents-TouchWidgets">
@@ -7014,6 +7016,7 @@ Source: http://focus.ti.com/lit/ds/symlink/tps61070.pdf</description>
 <smd name="P$2" x="20.5" y="0" dx="3" dy="5" layer="1"/>
 <smd name="P$3" x="-0.1" y="0" dx="5" dy="5" layer="1"/>
 <circle x="0" y="0" radius="20" width="0.127" layer="21"/>
+<text x="-2.54" y="5.08" size="1.27" layer="21">&gt;NAME</text>
 </package>
 </packages>
 </library>
@@ -7040,7 +7043,7 @@ Source: http://focus.ti.com/lit/ds/symlink/tps61070.pdf</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="ELETROBLOCKS RULES">
+<designrules name="ELETROBLOCKS RULES *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -7069,7 +7072,7 @@ design rules under a new name.</description>
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="6mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="8mil"/>
+<param name="mdCopperDimension" value="0mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="8mil"/>
@@ -7238,25 +7241,27 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="64M3125" x="15.25" y="22.19" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULARITY" value="0" x="15.25" y="22.19" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150" x="52" y="20" smashed="yes" rot="MR180">
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R" x="52" y="20" smashed="yes" rot="MR180">
 <attribute name="NAME" x="54.27" y="19.33" size="1.27" layer="26" rot="MR90"/>
 <attribute name="POPULARITY" value="45" x="67.24" y="37.78" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="67.24" y="37.78" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150" x="51" y="27.5" smashed="yes" rot="MR0">
+<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R" x="51" y="27.5" smashed="yes" rot="MR0">
 <attribute name="NAME" x="53.27" y="26.93" size="1.27" layer="26" rot="MR90"/>
 <attribute name="POPULARITY" value="45" x="30.68" y="9.72" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="30.68" y="9.72" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" value="" x="52" y="24" smashed="yes" rot="MR0">
+<element name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" package="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" value="BC817" x="52" y="24" smashed="yes" rot="MR0">
 <attribute name="NAME" x="53.605" y="23.495" size="1.27" layer="26" rot="MR90"/>
 <attribute name="POPULARITY" value="0" x="27.87" y="7.49" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="53.905" y="20.825" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="U$1" library="supply1" package="CR2025" value="CR2025" x="22.86" y="27.94" smashed="yes" rot="MR270"/>
-<element name="U$2" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="24.8" y="63.4" smashed="yes" rot="MR180"/>
-<element name="U$3" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="35.6" y="4.8" smashed="yes" rot="MR180"/>
-<element name="U$4" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="62" y="25" smashed="yes" rot="MR180"/>
+<element name="PW1" library="supply1" package="CR2025" value="CR2025 BATERY HOLDER" x="22.86" y="27.94" smashed="yes" rot="MR270">
+<attribute name="NAME" x="19.37" y="29.88" size="1.27" layer="22" rot="MR270"/>
+</element>
+<element name="LED2" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="24.8" y="63.4" smashed="yes" rot="MR180"/>
+<element name="LED3" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="35.6" y="4.8" smashed="yes" rot="MR180"/>
+<element name="LED1" library="Eletroblocks Lib" package="LED5050" value="LED5050" x="62" y="25" smashed="yes" rot="MR180"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -7264,13 +7269,12 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="4"/>
 <contactref element="IC1" pad="2"/>
 <contactref element="T1" pad="E"/>
-<contactref element="U$1" pad="P$3"/>
-<polygon width="0.3048" layer="16">
-<vertex x="-0.2" y="0.2"/>
-<vertex x="78.5" y="0.2"/>
-<vertex x="78.5" y="77.9"/>
-<vertex x="-0.217646875" y="77.9"/>
-<vertex x="-0.2" y="77.882353125"/>
+<contactref element="PW1" pad="P$3"/>
+<polygon width="0" layer="16">
+<vertex x="-0.19995625" y="0"/>
+<vertex x="71.4" y="0"/>
+<vertex x="71.4" y="72.27"/>
+<vertex x="-0.21636875" y="72.27"/>
 </polygon>
 <wire x1="51.05" y1="22.9" x2="49.7" y2="22.9" width="0.3048" layer="16"/>
 <wire x1="49.7" y1="22.9" x2="49.5" y2="23.1" width="0.3048" layer="16"/>
@@ -7279,6 +7283,9 @@ design rules under a new name.</description>
 <wire x1="49" y1="23.6" x2="47" y2="23.6" width="0.3048" layer="1"/>
 <via x="47" y="23.6" extent="1-16" drill="0.35"/>
 <wire x1="47" y1="23.6" x2="47" y2="24.75" width="0.3048" layer="16"/>
+<wire x1="47" y1="24.75" x2="46.05" y2="27.25" width="0" layer="19" extent="16-16"/>
+<wire x1="42.05" y1="24" x2="47" y2="23.6" width="0" layer="19" extent="16-16"/>
+<wire x1="22.86" y1="28.04" x2="42.05" y2="24" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$11">
 <contactref element="B2" pad="BUTTON"/>
@@ -7292,10 +7299,10 @@ design rules under a new name.</description>
 <signal name="VCC">
 <contactref element="IC1" pad="5"/>
 <contactref element="IC1" pad="6"/>
-<contactref element="U$1" pad="P$1"/>
-<contactref element="U$3" pad="P$1"/>
-<contactref element="U$2" pad="P$1"/>
-<contactref element="U$4" pad="P$1"/>
+<contactref element="PW1" pad="P$1"/>
+<contactref element="LED3" pad="P$1"/>
+<contactref element="LED2" pad="P$1"/>
+<contactref element="LED1" pad="P$1"/>
 <wire x1="47" y1="27.25" x2="47.1" y2="27.25" width="0.3048" layer="16"/>
 <wire x1="47.1" y1="27.25" x2="47.95" y2="27.25" width="0.3048" layer="16"/>
 <wire x1="23.2" y1="63.4" x2="23.2" y2="47.8" width="0.3048" layer="16"/>
@@ -7325,9 +7332,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="LEDS">
 <contactref element="R2" pad="2"/>
-<contactref element="U$4" pad="P$2"/>
-<contactref element="U$3" pad="P$2"/>
-<contactref element="U$2" pad="P$2"/>
+<contactref element="LED1" pad="P$2"/>
+<contactref element="LED3" pad="P$2"/>
+<contactref element="LED2" pad="P$2"/>
 <wire x1="26.4" y1="63.4" x2="26.4" y2="45.5" width="0.3048" layer="16"/>
 <wire x1="37.2" y1="4.8" x2="46.6" y2="4.8" width="0.3048" layer="16"/>
 <wire x1="50.05" y1="27.5" x2="50.2" y2="28.15" width="0.3048" layer="16"/>
@@ -7422,6 +7429,14 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$26">
 <via x="15.3" y="26.3" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="SIGNAL">
+<polygon width="0.4064" layer="1">
+<vertex x="0" y="0"/>
+<vertex x="0" y="72"/>
+<vertex x="71.61" y="72"/>
+<vertex x="71.61" y="0"/>
+</polygon>
 </signal>
 </signals>
 <mfgpreviewcolors>

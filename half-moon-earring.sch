@@ -14035,6 +14035,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <smd name="P$2" x="20.5" y="0" dx="3" dy="5" layer="1"/>
 <smd name="P$3" x="-0.1" y="0" dx="5" dy="5" layer="1"/>
 <circle x="0" y="0" radius="20" width="0.127" layer="21"/>
+<text x="-2.54" y="5.08" size="1.27" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -14137,16 +14138,16 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" technology="BC817-16LT1"/>
+<part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" technology="BC817-16LT1" value="BC817"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150"/>
-<part name="U$1" library="supply1" deviceset="CR2025" device=""/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R"/>
+<part name="PW1" library="supply1" deviceset="CR2025" device="" value="CR2025 BATERY HOLDER"/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$2" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
-<part name="U$3" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
-<part name="U$4" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
+<part name="LED2" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
+<part name="LED3" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
+<part name="LED1" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
@@ -14183,7 +14184,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </instance>
 <instance part="T1" gate="G$1" x="40.64" y="-48.26" smashed="yes" grouprefs="DRIVER1">
 <attribute name="NAME" x="43.18" y="-48.26" size="1.778" layer="95"/>
-<attribute name="VALUE" x="30.48" y="-43.18" size="1.778" layer="96"/>
+<attribute name="VALUE" x="48.26" y="-50.8" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND1" gate="1" x="43.18" y="-58.42" smashed="yes" grouprefs="DRIVER1">
 <attribute name="VALUE" x="40.64" y="-60.96" size="1.778" layer="96"/>
@@ -14196,22 +14197,22 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <attribute name="NAME" x="41.6814" y="-39.37" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="46.482" y="-39.37" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$1" gate="G$1" x="10.16" y="73.66" smashed="yes" grouprefs="SOURCE"/>
+<instance part="PW1" gate="G$1" x="10.16" y="73.66" smashed="yes" grouprefs="SOURCE"/>
 <instance part="P+3" gate="VCC" x="10.16" y="96.52" smashed="yes" grouprefs="SOURCE">
 <attribute name="VALUE" x="7.62" y="93.98" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND5" gate="1" x="10.16" y="50.8" smashed="yes" grouprefs="SOURCE">
 <attribute name="VALUE" x="7.62" y="48.26" size="1.778" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="20.32" y="-99.06" smashed="yes" grouprefs="LEDS">
+<instance part="LED2" gate="G$1" x="20.32" y="-99.06" smashed="yes" grouprefs="LEDS">
 <attribute name="NAME" x="25.4" y="-101.6" size="1.778" layer="95"/>
 <attribute name="VALUE" x="25.4" y="-104.14" size="1.778" layer="96"/>
 </instance>
-<instance part="U$3" gate="G$1" x="20.32" y="-109.22" smashed="yes" grouprefs="LEDS">
+<instance part="LED3" gate="G$1" x="20.32" y="-109.22" smashed="yes" grouprefs="LEDS">
 <attribute name="NAME" x="25.4" y="-111.76" size="1.778" layer="95"/>
 <attribute name="VALUE" x="25.4" y="-114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="U$4" gate="G$1" x="20.32" y="-88.9" smashed="yes" grouprefs="LEDS">
+<instance part="LED1" gate="G$1" x="20.32" y="-88.9" smashed="yes" grouprefs="LEDS">
 <attribute name="NAME" x="25.4" y="-91.44" size="1.778" layer="95"/>
 <attribute name="VALUE" x="25.4" y="-93.98" size="1.778" layer="96"/>
 </instance>
@@ -14246,7 +14247,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="43.18" y1="-53.34" x2="43.18" y2="-55.88" width="0.1524" layer="91" grouprefs="DRIVER1"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
+<pinref part="PW1" gate="G$1" pin="P$2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="10.16" y1="66.04" x2="10.16" y2="53.34" width="0.1524" layer="91" grouprefs="SOURCE"/>
 </segment>
@@ -14276,18 +14277,18 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="35.56" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91" grouprefs="TOUCH1"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
+<pinref part="PW1" gate="G$1" pin="P$1"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <wire x1="10.16" y1="78.74" x2="10.16" y2="93.98" width="0.1524" layer="91" grouprefs="SOURCE"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P$1"/>
+<pinref part="LED3" gate="G$1" pin="P$1"/>
 <wire x1="20.32" y1="-109.22" x2="12.7" y2="-109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="12.7" y1="-109.22" x2="12.7" y2="-99.06" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="U$2" gate="G$1" pin="P$1"/>
+<pinref part="LED2" gate="G$1" pin="P$1"/>
 <wire x1="20.32" y1="-99.06" x2="12.7" y2="-99.06" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="12.7" y1="-99.06" x2="12.7" y2="-88.9" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
+<pinref part="LED1" gate="G$1" pin="P$1"/>
 <wire x1="12.7" y1="-88.9" x2="20.32" y2="-88.9" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <wire x1="12.7" y1="-83.82" x2="12.7" y2="-88.9" width="0.1524" layer="91" grouprefs="LEDS"/>
@@ -14313,13 +14314,13 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="43.18" y="-27.94" size="1.778" layer="95" rot="R90" xref="yes" grouprefs="DRIVER1"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="P$2"/>
+<pinref part="LED1" gate="G$1" pin="P$2"/>
 <wire x1="25.4" y1="-88.9" x2="38.1" y2="-88.9" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="38.1" y1="-88.9" x2="38.1" y2="-99.06" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="U$3" gate="G$1" pin="P$2"/>
+<pinref part="LED3" gate="G$1" pin="P$2"/>
 <wire x1="38.1" y1="-99.06" x2="38.1" y2="-109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="38.1" y1="-109.22" x2="25.4" y2="-109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="U$2" gate="G$1" pin="P$2"/>
+<pinref part="LED2" gate="G$1" pin="P$2"/>
 <wire x1="25.4" y1="-99.06" x2="38.1" y2="-99.06" width="0.1524" layer="91" grouprefs="LEDS"/>
 <junction x="38.1" y="-99.06" grouprefs="LEDS"/>
 <label x="38.1" y="-99.06" size="1.778" layer="95" xref="yes" grouprefs="LEDS"/>
