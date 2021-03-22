@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="desenhando.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 61.76513 61.76513"
+   height="61.765129mm"
+   width="61.765129mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="729"
+     inkscape:window-width="1350"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="154.08747"
+     inkscape:cx="161.63792"
+     inkscape:zoom="4.2053975"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(-4.4487752,-30.227074)">
+    <path
+       d="M 35.331787,30.670066 A 30.43963,30.43963 0 0 0 4.8917672,61.109636 30.43963,30.43963 0 0 0 35.331787,91.549212 30.43963,30.43963 0 0 0 65.770912,61.269635 17.394075,17.394075 0 0 1 53.995345,65.862379 17.394075,17.394075 0 0 1 36.600984,48.468015 17.394075,17.394075 0 0 1 46.475901,32.783743 30.43963,30.43963 0 0 0 35.331787,30.670066 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.885984;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.85197;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path833" />
+  </g>
+</svg>

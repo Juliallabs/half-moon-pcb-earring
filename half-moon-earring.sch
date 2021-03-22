@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14021,56 +14021,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="supply1">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
- GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
- Please keep in mind, that these devices are necessary for the
- automatic wiring of the supply signals.&lt;p&gt;
- The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
- In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="CR2025">
-<smd name="P$1" x="-20.5" y="0" dx="3" dy="5" layer="1"/>
-<smd name="P$2" x="20.5" y="0" dx="3" dy="5" layer="1"/>
-<smd name="P$3" x="-0.1" y="0" dx="5" dy="5" layer="1"/>
-<circle x="0" y="0" radius="20" width="0.127" layer="21"/>
-<text x="-2.54" y="5.08" size="1.27" layer="21">&gt;NAME</text>
-</package>
-</packages>
-<symbols>
-<symbol name="CR2025">
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<pin name="P$1" x="0" y="5.08" length="middle" rot="R90"/>
-<pin name="P$2" x="0" y="-7.62" length="middle" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CR2025">
-<gates>
-<gate name="G$1" symbol="CR2025" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="" package="CR2025">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="Eletroblocks Lib">
 <packages>
 <package name="LED5050">
@@ -14114,6 +14064,47 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="cr2025">
+<packages>
+<package name="CR2035">
+<circle x="0" y="0" radius="10" width="0.1524" layer="21"/>
+<smd name="P$1" x="-11" y="0" dx="5.08" dy="2.54" layer="1" rot="R90"/>
+<smd name="P$2" x="11" y="0" dx="5.08" dy="2.54" layer="1" rot="R90"/>
+<text x="13" y="0" size="1.778" layer="1">+</text>
+<text x="13" y="0" size="1.778" layer="29">+</text>
+<text x="-14" y="1" size="1.778" layer="29">-</text>
+<text x="-14" y="1" size="1.778" layer="1">-</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CR2035">
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<pin name="P$1" x="0" y="5.08" length="middle" rot="R270"/>
+<pin name="P$2" x="0" y="-7.62" length="middle" rot="R90"/>
+<text x="2.54" y="0" size="1.778" layer="94">+</text>
+<text x="2.54" y="-2.54" size="1.778" layer="94" rot="R180">-</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CR2035">
+<gates>
+<gate name="G$1" symbol="CR2035" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CR2035">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14142,13 +14133,13 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="150R"/>
-<part name="PW1" library="supply1" deviceset="CR2025" device="" value="CR2025 BATERY HOLDER"/>
-<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="LED2" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
 <part name="LED3" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
 <part name="LED1" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="U$1" library="cr2025" deviceset="CR2035" device=""/>
+<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14197,13 +14188,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <attribute name="NAME" x="41.6814" y="-39.37" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="46.482" y="-39.37" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="PW1" gate="G$1" x="10.16" y="73.66" smashed="yes" grouprefs="SOURCE"/>
-<instance part="P+3" gate="VCC" x="10.16" y="96.52" smashed="yes" grouprefs="SOURCE">
-<attribute name="VALUE" x="7.62" y="93.98" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND5" gate="1" x="10.16" y="50.8" smashed="yes" grouprefs="SOURCE">
-<attribute name="VALUE" x="7.62" y="48.26" size="1.778" layer="96"/>
-</instance>
 <instance part="LED2" gate="G$1" x="20.32" y="-99.06" smashed="yes" grouprefs="LEDS">
 <attribute name="NAME" x="25.4" y="-101.6" size="1.778" layer="95"/>
 <attribute name="VALUE" x="25.4" y="-104.14" size="1.778" layer="96"/>
@@ -14218,6 +14202,13 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </instance>
 <instance part="P+4" gate="VCC" x="12.7" y="-81.28" smashed="yes" grouprefs="LEDS">
 <attribute name="VALUE" x="10.16" y="-83.82" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="U$1" gate="G$1" x="10.16" y="66.04" smashed="yes" grouprefs="SOURCE"/>
+<instance part="P+5" gate="VCC" x="10.16" y="78.74" smashed="yes" grouprefs="SOURCE">
+<attribute name="VALUE" x="7.62" y="76.2" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND6" gate="1" x="10.16" y="50.8" smashed="yes" grouprefs="SOURCE">
+<attribute name="VALUE" x="7.62" y="48.26" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -14247,9 +14238,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="43.18" y1="-53.34" x2="43.18" y2="-55.88" width="0.1524" layer="91" grouprefs="DRIVER1"/>
 </segment>
 <segment>
-<pinref part="PW1" gate="G$1" pin="P$2"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="10.16" y1="66.04" x2="10.16" y2="53.34" width="0.1524" layer="91" grouprefs="SOURCE"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="10.16" y1="58.42" x2="10.16" y2="53.34" width="0.1524" layer="91" grouprefs="SOURCE"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -14277,11 +14268,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="35.56" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91" grouprefs="TOUCH1"/>
 </segment>
 <segment>
-<pinref part="PW1" gate="G$1" pin="P$1"/>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="10.16" y1="78.74" x2="10.16" y2="93.98" width="0.1524" layer="91" grouprefs="SOURCE"/>
-</segment>
-<segment>
 <pinref part="LED3" gate="G$1" pin="P$1"/>
 <wire x1="20.32" y1="-109.22" x2="12.7" y2="-109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="12.7" y1="-109.22" x2="12.7" y2="-99.06" width="0.1524" layer="91" grouprefs="LEDS"/>
@@ -14293,6 +14279,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <wire x1="12.7" y1="-83.82" x2="12.7" y2="-88.9" width="0.1524" layer="91" grouprefs="LEDS"/>
 <junction x="12.7" y="-99.06" grouprefs="LEDS"/>
+</segment>
+<segment>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+<wire x1="10.16" y1="76.2" x2="10.16" y2="71.12" width="0.1524" layer="91" grouprefs="SOURCE"/>
 </segment>
 </net>
 <net name="DRIVER" class="0">
