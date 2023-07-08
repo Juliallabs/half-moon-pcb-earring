@@ -1,8 +1,8 @@
 ## ⭐ Half Moon Earring
 
-<img src="./imagens/front.png">
+<img src="./imagens/top.png">
 <img src="./imagens/bottom.png">
-<img src="./imagens/front-real.png">
+<img src="./imagens/top-real.png">
 <img src="./imagens/bottom-real.png">
 <img src="./imagens/visualizacao.gif">
 <img src="./imagens/funcionando.gif">
